@@ -1,6 +1,10 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:rxdart/subjects.dart';
+import 'package:todo_rxdart/comment_model.dart';
+import 'package:todo_rxdart/comment_screen.dart';
 import 'package:todo_rxdart/todo_model.dart';
 import 'package:uuid/uuid.dart';
 
@@ -19,7 +23,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const CommentScreen(),
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -80,7 +85,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    _startListeningToSearch();
+    // _startListeningToSearch();
+    // getData();
     super.initState();
   }
 
